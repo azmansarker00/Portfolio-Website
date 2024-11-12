@@ -23,6 +23,8 @@ nav {
   background-color: #f67280;
   color: white;
   box-shadow: 0px 0px 10px #355c7d;
+  position: fixed;
+  width: 100%;
 }
 
 .logo {
