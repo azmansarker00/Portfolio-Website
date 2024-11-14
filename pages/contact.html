@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website - Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+
+      input::-webkit-input-placeholder,
+      textarea::-webkit-input-placeholder {
+        color: #aca49c;
+        font-size: 0.875em;
+      }
+
+      input:focus::-webkit-input-placeholder,
+      textarea:focus::-webkit-input-placeholder {
+        color: #bbb5af;
+      }
+
+      input::-moz-placeholder,
+      textarea::-moz-placeholder {
+        color: #aca49c;
+        font-size: 0.875em;
+      }
+
+      input:focus::-moz-placeholder,
+      textarea:focus::-moz-placeholder {
+        color: #bbb5af;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #aca49c;
+        font-size: 0.875em;
+      }
+
+      input:focus::placeholder,
+      textarea:focus::placeholder {
+        color: #bbb5af;
+      }
+
+      input::-ms-placeholder,
+      textarea::-ms-placeholder {
+        color: #aca49c;
+        font-size: 0.875em;
+      }
+
+      input:focus::-ms-placeholder,
+      textarea:focus::-ms-placeholder {
+        color: #bbb5af;
+      }
+
+      /* on hover placeholder */
+
+      input:hover::-webkit-input-placeholder,
+      textarea:hover::-webkit-input-placeholder {
+        color: #e2dedb;
+        font-size: 0.875em;
+      }
+
+      input:hover:focus::-webkit-input-placeholder,
+      textarea:hover:focus::-webkit-input-placeholder {
+        color: #cbc6c1;
+      }
+
+      input:hover::-moz-placeholder,
+      textarea:hover::-moz-placeholder {
+        color: #e2dedb;
+        font-size: 0.875em;
+      }
+
+      input:hover:focus::-moz-placeholder,
+      textarea:hover:focus::-moz-placeholder {
+        color: #cbc6c1;
+      }
+
+      input:hover::placeholder,
+      textarea:hover::placeholder {
+        color: #e2dedb;
+        font-size: 0.875em;
+      }
+
+      input:hover:focus::placeholder,
+      textarea:hover:focus::placeholder {
+        color: #cbc6c1;
+      }
+
+      input:hover::placeholder,
+      textarea:hover::placeholder {
+        color: #e2dedb;
+        font-size: 0.875em;
+      }
+
+      input:hover:focus::-ms-placeholder,
+      textarea:hover::focus:-ms-placeholder {
+        color: #cbc6c1;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        background: #e2dedb;
+        color: #b3aca7;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        position: relative;
+        margin: 100px 0 25px 0;
+        font-size: 2.3em;
+        text-align: center;
+        letter-spacing: 7px;
+      }
+
+      #form {
+        position: relative;
+        width: 80%;
+        max-width: 500px;
+        margin: 50px auto 100px auto;
+      }
+
+      input {
+        font-family: "Lato", sans-serif;
+        font-size: 0.875em;
+        width: 100%;
+        height: 50px;
+        padding: 0px 15px;
+
+        background: transparent;
+        outline: none;
+        color: #726659;
+
+        border: solid 1px #b3aca7;
+        border-bottom: none;
+
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+      }
+
+      input:hover {
+        background: #b3aca7;
+        color: #e2dedb;
+      }
+
+      textarea {
+        width: 100%;
+        height: 110px;
+        padding: 15px;
+
+        background: transparent;
+        outline: none;
+
+        color: #726659;
+        font-family: "Lato", sans-serif;
+        font-size: 0.875em;
+
+        border: solid 1px #b3aca7;
+
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+      }
+
+      textarea:hover {
+        background: #b3aca7;
+        color: #e2dedb;
+      }
+
+      #submit {
+        width: 100%;
+        padding: 0;
+        margin: -5px 0px 0px 0px;
+
+        font-family: "Lato", sans-serif;
+        font-size: 0.875em;
+        color: #b3aca7;
+
+        outline: none;
+        cursor: pointer;
+
+        border: solid 1px #b3aca7;
+        border-top: none;
+      }
+
+      #submit:hover {
+        color: #e2dedb;
+      }
+
+      .footer-name {
+        color: black;
+      }
+
+      .footer-logo {
+        font-size: 30px;
+        color: rgb(128, 128, 128);
+        padding: 0 1rem;
+        transition: color 0.5s;
+      }
+
+      .footer-logo:hover {
+        color: orange;
+      }
+
+      .licence {
+        padding: 0 1rem;
+        border-radius: 20px;
+        box-shadow: 1px 1px black, -1px -1px black;
+        cursor: alias;
+        display: inline-block;
+        color: black;
+        margin-bottom: 5px;
+      }
+
+      /* Width of the scrollbar */
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      /* Track of the scrollbar */
+      ::-webkit-scrollbar-track {
+        background-color: black;
+      }
+
+      /* Handle of the scrollbar */
+      ::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 6px;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        header {
+          font-size: 2em;
+          margin: 80px 0 20px 0;
+        }
+
+        #form {
+          width: 90%;
+        }
+
+        input,
+        textarea,
+        #submit {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header {
+          font-size: 1.5em;
+          margin: 60px 0 15px 0;
+        }
+
+        input,
+        textarea {
+          font-size: 0.75em;
+        }
+
+        .footer-logo {
+          font-size: 24px;
+        }
+
+        .licence {
+          padding: 0.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        footer {
+          padding: 1rem;
+        }
+      }
+      hr {
+        border: 2px solid black;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>We are here your time of need.</header>
+
+    <form id="form" class="topBefore">
+      <input id="name" type="text" placeholder="NAME" />
+      <input id="email" type="text" placeholder="E-MAIL" />
+      <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+      <input id="submit" type="submit" value="GO!" />
+    </form>
+
+    <hr />
+    <footer>
+      <div><h1 class="footer-name">ITS MINE</h1></div>
+      <div class="licence">Copyright @2024 by AZMAN SARKER</div>
+      <div>
+        <a
+          href="https://www.instagram.com/am_i_fair/"
+          target="_blank"
+          class="footer-logo"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/azman.sarker.ifrad"
+          target="_blank"
+          class="footer-logo"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/@thesnhigdho"
+          target="_blank"
+          class="footer-logo"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>

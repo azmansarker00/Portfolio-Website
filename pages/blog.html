@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Web Title -->
+    <title>Portfolio Website - Blog</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font-awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google-font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Noto+Sans+Elbasan&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Oswald", sans-serif;
+      }
+
+      body {
+        background-color: #f8b195;
+      }
+
+      /* navbar */
+      .container {
+        width: 100%;
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f67280;
+        color: white;
+        box-shadow: 0px 0px 10px #355c7d;
+        position: fixed;
+        width: 100%;
+      }
+
+      .logo {
+        font-size: 35px;
+        font-weight: bold;
+        cursor: default;
+      }
+
+      .nav-list ul {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-list ul li {
+        margin-left: 3rem;
+        cursor: pointer;
+        transition: color 0.5s;
+        transition: padding 0.4s;
+        transition: font-size 0.3s;
+
+        &:hover {
+          color: #ddd;
+          background-color: transparent;
+          border-radius: 10px;
+          padding: 0.3rem;
+          font-size: 25px;
+        }
+      }
+
+      .nav-list ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+
+      .nav-list ul li a:hover {
+        color: #ddd;
+      }
+
+      .log-list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .log-list ul li {
+        margin-left: 20px;
+      }
+
+      .log-list ul li i {
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .log-list ul li i:hover {
+        color: #ddd;
+      }
+
+      /* contant */
+      .contant {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+
+      .box {
+        width: 40%;
+        height: 60px;
+        background-color: #f67280;
+        color: rgb(78, 14, 14);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 20px;
+      }
+
+      .contant-text {
+        font-size: 30px;
+      }
+
+      /* footer */
+      footer {
+        width: 100%;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 60px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 30px;
+      }
+
+      .footer-name {
+        cursor: default;
+      }
+      .footer-logo {
+        font-size: 30px;
+        color: black;
+        padding: 0 1rem;
+        transition: color 0.5s;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      .licence {
+        padding: 0 1rem;
+        border-radius: 20px;
+        box-shadow: 1px 1px black, -1px -1px black;
+        cursor: alias;
+      }
+
+      /* Media Queries for Mobile */
+      @media (max-width: 768px) {
+        .nav-list ul,
+        .log-list ul {
+          flex-direction: row;
+          align-items: center;
+          height: 15px;
+        }
+
+        .nav-list ul li,
+        .log-list ul li {
+          margin: 0;
+          margin-top: 1rem;
+          font-size: 18px;
+          padding: 0 20px;
+        }
+
+        .log-list ul li i {
+          display: none;
+        }
+
+        .logo {
+          font-size: 28px;
+        }
+
+        .content-text {
+          font-size: 3rem;
+        }
+
+        .box {
+          width: 80%;
+          height: 68px;
+        }
+
+        footer {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          padding: 20px 0;
+          line-height: 1.5;
+        }
+
+        .footer-logo {
+          font-size: 24px;
+          padding: 0.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav {
+          flex-direction: column;
+        }
+
+        .nav-list ul {
+          margin-top: 10px;
+        }
+
+        .nav-list ul li {
+          margin-left: 0;
+          margin-top: 0.5rem;
+          font-size: 16px;
+        }
+
+        .log-list ul {
+          margin-top: 10px;
+        }
+
+        .log-list ul li {
+          margin-left: 0;
+          margin-top: 0.5rem;
+        }
+
+        .logo {
+          font-size: 24px;
+        }
+
+        .content-text {
+          font-size: 2rem;
+        }
+
+        .box {
+          width: 90%;
+        }
+
+        .footer-logo {
+          font-size: 20px;
+          padding: 0.3rem;
+        }
+      }
+
+      /* Width of the scrollbar */
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      /* Track of the scrollbar */
+      ::-webkit-scrollbar-track {
+        background-color: #f67280;
+      }
+
+      /* Handle of the scrollbar */
+      ::-webkit-scrollbar-thumb {
+        background-color: wheat;
+        border-radius: 6px;
+      }
+
+      hr {
+        border: 2px solid black;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="container">
+      <nav>
+        <div class="logo">ITS MINE</div>
+        <div class="nav-list">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/contact.html" target="_blank">Contact</a></li>
+          </ul>
+        </div>
+        <div class="log-list">
+          <ul>
+            <li><i class="fa-solid fa-caret-down"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- contant -->
+    <div class="contant">
+      <div class="box">
+        <h1 class="contant-text">
+          "I don't have anything to write a blog about, so you won't find a blog
+          here. Get lost."
+        </h1>
+      </div>
+    </div>
+
+    <hr />
+    <!-- footer -->
+
+    <footer>
+      <div><h1 class="footer-name">ITS MINE</h1></div>
+      <div class="licence">Copyright @2024 by AZMAN SARKER</div>
+      <div>
+        <a
+          href="https://www.instagram.com/am_i_fair/"
+          target="_blank"
+          class="footer-logo"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/azman.sarker.ifrad"
+          target="_blank"
+          class="footer-logo"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/@thesnhigdho"
+          target="_blank"
+          class="footer-logo"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="function.js"></script>
+  </body>
+</html>
